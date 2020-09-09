@@ -1,0 +1,15 @@
+import datetime,os,sys,shutil,argparse
+
+parser = argparse.ArgumentParser(description='how many rows to append')
+parser.add_argument("-a", required=True, type=int, help="append how many rows")
+parser.add_argument("-f", required=True, type=str, help="file path to add rows")
+args = parser.parse_args()
+
+path = args.f
+
+date = datetime.datetime.now()
+
+for i in range(args.a):
+    f=open(path, "a")
+    i += 1
+    f.write(f"Detta är radnr: {i} och datumet är {date} \n")
