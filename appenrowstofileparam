@@ -13,3 +13,4 @@ for i in range(args.a):
     f=open(path, "a")
     i += 1
     f.write(f"Detta är radnr: {i} och datumet är {date} \n")
+    f.close
